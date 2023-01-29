@@ -18,9 +18,10 @@ return new class extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('email');
-            $table->string('membership_type');
+            // $table->string('membership_type');
             $table->string('membership_expiration');
             $table->integer('trainer_id');
+            $table->integer('membership_id');
         });
     }
 
