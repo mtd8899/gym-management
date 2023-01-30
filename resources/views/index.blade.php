@@ -4,10 +4,11 @@
 <div class="shadow p-4 mt-2">
     <h4 class="">Member</h4>
     @if (session('success'))
-    <div class="alert alert-success" role="alert"> 
-        {{ session('success') }}
-    </div>
-    @endif
+        <div class="alert alert-success alert-dismissible fade show" id="alert" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif 
 
     <table class="table">
         <thead>
@@ -103,4 +104,10 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    setTimeout(function () {
+
+        $('#alert').alert('close');
+    }, 5000);
+</script>
 @stop
